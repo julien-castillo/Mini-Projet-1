@@ -11,3 +11,5 @@ const panelDiv = document.createElement('div');
 
 panelDiv.style = "background-image: url(/img/explore-the-world.jpg)";
 panelDiv.className = "panel active";
+
+document.querySelector('.container').appendChild(panelDiv);
