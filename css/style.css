@@ -23,17 +23,33 @@ body {
 }
 
 .panel {
+  position: relative;
   height: 80vh;
   background-image: url(/img/city-on-winter.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  flex: 1;
+  flex: 0.5;
   margin: 10px;
   border-radius: 50px;
   cursor: pointer;
+  transition: flex 700ms ease-in-out;
 }
 
 .panel h3 {
+    opacity: 0;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    margin: 0;
+}
 
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out 0.4s;
 }
