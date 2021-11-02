@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  user-select: none;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 90vw;
+  display: flex;
+}
+
+.panel {
+  height: 80vh;
+  background-image: url(/img/city-on-winter.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 1;
+  margin: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.panel h3 {
+
+}
