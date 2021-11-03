@@ -1,7 +1,8 @@
 export class Panel {
   constructor(title = "no title") {
-    const div = this.html = document.createElement("div");
+    const div = (this.html = document.createElement("div"));
     this.initialize(div, title);
+    this.listenClickEvent();
   }
 
   initialize(div, title) {
@@ -11,9 +12,22 @@ export class Panel {
     div.innerHTML = "<h3>" + title + "</3>";
   }
 
-  render() {
-    document
+listenClickEvent() {
+this.html.addEventListener('click', () => {
+    Array
+      .from(this.html.parentNode.children)
+      .forEach(p => p.classList.remove('active'));
+    this.html.classList.add('active');
+    });
+}
+
+
+  static render(panels) {
+      panels[0].html.classList.add('active');
+    panels.forEach((p) => {
+      document
       .querySelector(".container")
-      .appendChild(this.html);
+      .appendChild(p.html);
+    });
   }
 }
