@@ -9,7 +9,11 @@ export class Panel {
     // div.style = "background-image: url(img/" + img + ".jpg)";
     div.style = "background-image: url(img/city-on-winter.jpg)";
     div.className = "panel";
-    div.innerHTML = "<h3>" + title + "</3>";
+    div.innerHTML = "<h3>" + capitalizeTitle() + "</3>";
+
+    function capitalizeTitle() {
+      return title; 
+    }
   }
 
 listenClickEvent() {
